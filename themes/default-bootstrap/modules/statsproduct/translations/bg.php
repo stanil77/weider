@@ -1,0 +1,32 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_78e454064a7d3a7755a011a3b79f31a7'] = 'Детайли за продуктите';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_6602bbeb2956c035fb4cb5e844a4861b'] = 'Гайд';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_6e13e61b8535a66feb27d285f5c42855'] = 'След като избереш категория и продукт, ще се визуализира информацията.';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_3ec365dd533ddb7ef3d1c111186ce872'] = 'Детайли';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_998e4c5c80f27dec552e99dfed34889a'] = 'Експорт на CSV';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_c90b9dca2d3f5bb6e0d0bdceac8a631d'] = 'Разпределение на продажбите';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Цени';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_44749712dbec183e983dcd78a7736c41'] = 'Дата';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_a240fa27925a635b08dc28c9e4f9216d'] = 'Поръчка';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_ce26601dac0dea138b7295f02b7620a7'] = 'Клиент';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_f2bbdf9f72c085adc4d0404e370f0f4c'] = 'Атрибут';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_694e8d1f2ee056f98ee488bdc4982d73'] = 'Количество';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_3601146c4e948c32b6424d2c0a7f0118'] = 'Цена';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_87017c9259838bb0918a2ab4f96016c0'] = 'Крос-продажби';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_df644ae155e79abf54175bd15d75f363'] = 'Име на продукта';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_2a0440eec72540c5b30d9199c01f348c'] = 'Продадено количество';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_844c29394eea07066bb2efefc35784ec'] = 'Средна цена';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_818f7defe18dbc97da82d054831df2ad'] = 'Кликни на продукт, за да видиш статистиката за него!';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_0173374ac20f5843d58b553d5b226ef6'] = 'Избери категория';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Всички';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_6ccf03bc05e4b749b74b5d577c7e7d3a'] = 'Налични продукти';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_63d5049791d9d79d86e9a108b0a999ca'] = 'Референция';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_49ee3087348e8d44e1feda1917443987'] = 'Име';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_7bd5825a187064017975513b95d7f7de'] = 'Налични количества за продажба';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_e22269bb51f9f2394e148716babbafbb'] = 'Популярност';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_5e9613e58f3bdbc89b1fef07274c0877'] = 'Посещения (х100)';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_287234a1ff35a314b5b6bc4e5828e745'] = 'Атрибути';
+$_MODULE['<{statsproduct}default-bootstrap>statsproduct_27ce7f8b5623b2e2df568d64cf051607'] = 'Стока';
