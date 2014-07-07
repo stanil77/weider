@@ -1,0 +1,198 @@
+/* Block editorial */
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+#text {
+    float: left;
+    font-size: 6.8em;
+    width: 47.023956%;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0px 0px 0px 0%;
+    clear: none;
+    min-height: 148px;
+    color: rgb(255, 255, 255);
+    background-image:url("/img/promo%20banner%20383x100.png"),-webkit-linear-gradient(240deg, rgba(0, 0, 0, 0) 0%, rgb(255, 196, 0) 79%, rgb(109, 92, 54) 100%);
+    background-image: url('/img/promo%20banner%20383x100.png'), linear-gradient(210deg, rgba(0, 0, 0, 0) 0%, rgb(255, 196, 0) 79%, rgb(109, 92, 54) 100%);
+    background-attachment: scroll;
+    -webkit-background-size: auto;
+    background-size: auto;
+    padding-top: 17px;
+    font-family: pragmatica-web;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgb(168, 142, 83);
+    background-position: 50% 50%, 0% 0%;
+    background-repeat: no-repeat, repeat;
+}
+
+#text1 {
+    float: left;
+    font-size: 6.8em;
+    width: 47.023956%;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0px 0px 0px 0%;
+    clear: none;
+    min-height: 148px;
+    color: rgb(255, 255, 255);
+    padding-top: 17px;
+    background-image:url("/img/staks%20383x100.png"),-webkit-linear-gradient(310deg, rgba(0, 0, 0, 0) 0%, rgb(255, 0, 0) 79%, rgb(109, 92, 54) 100%);
+    background-image: url('/img/staks%20383x100.png'), linear-gradient(140deg, rgba(0, 0, 0, 0) 0%, rgb(255, 0, 0) 79%, rgb(109, 92, 54) 100%);
+    background-attachment: scroll;
+    -webkit-background-size: auto;
+    background-size: auto;
+    font-family: pragmatica-web;
+    background-color: rgba(255, 255, 255, 0);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(168, 142, 83);
+    border-width: 1px;
+    background-position: 50% 50%, 0% 0%;
+    background-repeat: no-repeat, repeat;
+}
+
+#text:hover {
+    background-image:url("/img/promo%20banner%20383x100%201.png"),-webkit-linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: url('/img/promo%20banner%20383x100%201.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    background-attachment: scroll;
+    -webkit-background-size: auto;
+    background-size: auto;
+    background-color: rgb(109, 92, 54);
+    font-size: 4em;
+    background-position: 50% 50%, 0% 0%;
+    background-repeat: no-repeat, repeat;
+}
+
+#text1:hover {
+    background-image:url("/img/staks%20383x100%201.png"),-webkit-linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: url(/img/staks%20383x100%201.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    background-attachment: scroll;
+    -webkit-background-size: auto;
+    background-size: auto;
+    background-color: rgb(109, 92, 54);
+    line-height: 1em;
+    font-size: 4em;
+    background-position: 50% 50%, 0% 0%;
+    background-repeat: no-repeat, repeat;
+}
+
+@media only screen and (max-width: 2270px) {
+    #text {
+        float: left;
+        font-size: 4em;
+        width: 50%;
+        height: auto;
+        text-align: center;
+        font-weight: normal;
+        line-height: 1em;
+        clear: none;
+        min-height: 70px;
+        padding-top: 17px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        display: block;
+    }
+
+    #text1 {
+        float: left;
+        font-size: 4em;
+        width: 50%;
+        height: auto;
+        text-align: center;
+        font-weight: normal;
+        line-height: 1em;
+        clear: none;
+        min-height: 70px;
+        padding-top: 17px;
+        display: block;
+    }
+
+    #text1:hover {
+        height: auto;
+        min-height: 0px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #text1 {
+        clear: none;
+        font-size: 4em;
+        height: auto;
+        min-height: 0px;
+        width: 50%;
+    }
+
+    #text {
+        height: auto;
+        min-height: 0px;
+        width: 50%;
+        font-size: 4em;
+        clear: none;
+    }
+}
+
+@media only screen and (max-width: 803px) {
+    #text1 {
+        clear: both;
+        height: auto;
+        min-height: 0px;
+        width: 100%;
+    }
+
+    #text {
+        width: 100%;
+        height: auto;
+        clear: none;
+        min-height: 0px;
+    }
+}
+
+
+.editorial_block { margin-bottom: 2em }
+.editorial_block .rte { background: transparent none repeat scroll 0 0 }
+.editorial_block > h1 {
+	margin:40px 0 10px 0;
+    color: whitesmoke;
+	padding: 0;
+	background: none;
+}
+.editorial_block > h2 {
+	font-family: "sommet-rounded", sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    padding:0 0 10px 0;
+	line-height: 1.2em;
+	/*color: #666;*/
+	text-transform: none;
+	background: none;
+}
+#editorial_block_center p { padding-left: 0 }
+#editorial_block_center .rte p {
+    color:whitesmoke;
+    font-family: "sommet-rounded", sans-serif;
+}
+#editorial_block_center .rte h2 {
+    color:whitesmoke;
+    font-family: "sommet-rounded", sans-serif;
+    margin-top: 0px;
+}
+#editorial_block_center p#editorial_image_legend {
+   margin: 0 0 10px;
+   padding:0;
+	/*color: #666;*/
+   font-size: 10px;
+}
+
