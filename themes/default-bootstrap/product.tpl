@@ -300,9 +300,11 @@
 									</span>
 								{/if}
 							</div> <!-- end prices -->
+							{* // Stanil -- Discounts aren't clear
 							{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
 								<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>
 							{/if}
+							*}
 							{if $product->ecotax != 0}
 								<p class="price-ecotax">{l s='Include'} <span id="ecotax_price_display">{if $priceDisplay == 2}{$ecotax_tax_exc|convertAndFormatPrice}{else}{$ecotax_tax_inc|convertAndFormatPrice}{/if}</span> {l s='For green tax'}
 									{if $product->specificPrice && $product->specificPrice.reduction}
@@ -618,7 +620,7 @@
                 {/if}
             	
             	{if ($s_hastable2!=false)&&count($s_table2)>2}
-                    <section class="page-product-box" id="idTab25">
+                    <section class="page-product-box" id="idTab26">
 				            {if $s_hastable2!=false}
                                 {$s_table2[2]}
                             {/if}
