@@ -47,7 +47,9 @@
 		{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 		{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
 		<li class="ajax_block_product{if $page_name == 'index' || $page_name == 'product'} col-xs-12 col-sm-4 col-md-3{else} col-xs-12 col-sm-6 col-md-4{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
-			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+			<div class="product-container" {if isset($product.packItems) && $product.packItems|@count >0}style="background: -moz-linear-gradient(top,  red 0%, black 100%, black 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,red), color-stop(100%,black), color-stop(100%,black)); background: -webkit-linear-gradient(top,  red 0%,black 100%,black 100%);background: -o-linear-gradient(top,  red 0%,black 100%,black 100%);  background: -ms-linear-gradient(top,  red 0%,black 100%,black 100%);background: linear-gradient(top,  red 0%,black 100%,black 100%);"			"
+			{/if} 
+			itemscope itemtype="http://schema.org/Product">
 				<div class="left-block">
 					<div class="product-image-container">
 						<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">

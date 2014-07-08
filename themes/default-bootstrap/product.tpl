@@ -256,6 +256,13 @@
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
 							<div class="price">
+								<p id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction) && $group_reduction == 0} class="hidden"{/if}>
+									{if $priceDisplay >= 0 && $priceDisplay <= 2}
+										{hook h="displayProductPriceBlock" product=$product type="old_price"}
+										<span id="old_price_display">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction}{/if}</span>
+										<!-- {if $tax_enabled && $display_tax_label == 1}{if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}{/if} -->
+									{/if}
+								</p>
 								<p class="our_price_display" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 									{if $product->quantity > 0}<link itemprop="availability" href="http://schema.org/InStock"/>{/if}
 									{if $priceDisplay >= 0 && $priceDisplay <= 2}
@@ -281,17 +288,11 @@
 								<p id="reduction_amount" {if !$product->specificPrice || $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|floatval ==0} style="display:none"{/if}>
 									<span id="reduction_amount_display">
 									{if $product->specificPrice && $product->specificPrice.reduction_type == 'amount' && $product->specificPrice.reduction|floatval !=0}
-										-{convertPrice price=$productPriceWithoutReduction-$productPrice|floatval}
+										спестявате:{convertPrice price=$productPriceWithoutReduction-$productPrice|floatval}
 									{/if}
 									</span>
 								</p>
-								<p id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction) && $group_reduction == 0} class="hidden"{/if}>
-									{if $priceDisplay >= 0 && $priceDisplay <= 2}
-										{hook h="displayProductPriceBlock" product=$product type="old_price"}
-										<span id="old_price_display">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction}{/if}</span>
-										<!-- {if $tax_enabled && $display_tax_label == 1}{if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}{/if} -->
-									{/if}
-								</p>
+								
 								{if $priceDisplay == 2}
 									<br />
 									<span id="pretaxe_price">

@@ -6,7 +6,8 @@ ul.product_list .product-name {
   width: 100%;
   overflow: hidden; }
 ul.product_list .availability span {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   color: white;
   font-weight: bold;
   padding: 3px 8px 4px 8px;
@@ -166,6 +167,10 @@ ul.product_list.grid > li {
       width: 50%;
       float: left; } }
   ul.product_list.grid > li .product-container {
+    background: #6d5c36;
+    padding: 0;
+    position: relative; }
+    ul.product_list.grid > li .product-container {
     background: #6d5c36;
     padding: 0;
     position: relative; }

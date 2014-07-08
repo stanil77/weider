@@ -709,7 +709,8 @@ table.table-product-discounts {
 /* availability_statut */
 #availability_statut span#availability_label,
 #availability_date_label {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   width: 125px;
   font-weight: 700;
   font-size: 12px;
@@ -784,7 +785,7 @@ table.table-product-discounts {
       line-height: 28px; } }
 
 #old_price {
-  padding-bottom: 15px;
+  /*padding-bottom: 15px;*/
   font-size: 17px;
   text-decoration: line-through;
   display: inline-block;
