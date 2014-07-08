@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<a href="{$banner_link|escape:'htmlall':'UTF-8'}" title="{$banner_desc|escape:'htmlall':'UTF-8'}">
+<a href="/content/13-otstypki" title="Отстъпки">
 <marquee class="marquee"> ОТСТЪПКА ПРИ ПОРЪЧКА НАД 150 ЛЕВА!!! </marquee>
 
 </a>

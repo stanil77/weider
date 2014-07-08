@@ -24,7 +24,7 @@
 *}
 
 <!-- MODULE Loyalty -->
-<p id="loyalty">
+<p id="loyalty" style="color:white">
 	<i class="icon-flag"></i>
 	{if $points > 0}
 		{l s='By checking out this shopping cart you can collect up to' mod='loyalty'} <b>
