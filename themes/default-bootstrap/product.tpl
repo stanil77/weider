@@ -572,12 +572,14 @@
     {if (isset($product) && $product->description) || (isset($features) && $features) || (isset($accessories) && $accessories) || (isset($HOOK_PRODUCT_TAB) && $HOOK_PRODUCT_TAB) || (isset($attachments) && $attachments) || isset($product) && $product->customizable}
         {assign var="s_hastable2" value=strpos($product->description,"<p>stablica</p>")}
         {if $s_hastable2!=false}
-            {assign var="s_table2" value = explode("<p>stablica</p>",$product->description)}
+            {assign var="s_table2" value = array_filter(explode("<p>stablica</p>",$product->description))}
         {/if}
+       
         <div id="more_info_block" class="col-md-12 review-tab" style="padding-left:0px; padding-right:0px;">
             <ul id="more_info_tabs" class="idTabs idTabsShort nav nav-tabs">
                 {if $product->description}<li><a id="more_info_tab_more_info" href="#idTab1">{l s='More info'}</a></li>{/if}
                 {if $s_hastable2!=false}<li><a href="#idTab25">Хр. Стойности</a></li>{/if}
+                {if ($s_hastable2!=false)&&count($s_table2)>2}<li><a href="#idTab26">Съставки</a></li>{/if}
                 {if $features}<li><a id="more_info_tab_data_sheet" href="#idTab2">{l s='Data sheet'}</a></li>{/if}
                 {if $attachments}<li><a id="more_info_tab_attachments" href="#idTab9">{l s='Download'}</a></li>{/if}
                 {if isset($accessories) AND $accessories}<li><a href="#idTab4">{l s='Accessories'}</a></li>{/if}
@@ -614,7 +616,14 @@
                             {/if}
 			         </section>
                 {/if}
-            
+            	
+            	{if ($s_hastable2!=false)&&count($s_table2)>2}
+                    <section class="page-product-box" id="idTab25">
+				            {if $s_hastable2!=false}
+                                {$s_table2[2]}
+                            {/if}
+			         </section>
+                {/if}
             
                 
                 {if isset($features) && $features}
