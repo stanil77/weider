@@ -7334,7 +7334,7 @@ table#cart_summary .gift-icon {
   font-weight: normal; }
   #order .delivery_option > div > table,
   #order-opc .delivery_option > div > table {
-    background: white;
+    background: gray;
     margin-bottom: 0; }
     #order .delivery_option > div > table.resume,
     #order-opc .delivery_option > div > table.resume {
@@ -7385,7 +7385,7 @@ table#cart_summary .gift-icon {
 #carrierTable {
   border: 1px solid #999999;
   border-bottom: none;
-  background: white; }
+  background: gray; }
 
 #carrierTable tbody {
   border-bottom: 1px solid #999999; }
