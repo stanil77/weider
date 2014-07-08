@@ -10,7 +10,7 @@ http://uniformjs.com/
 */
 /* General settings */
 div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action, div.button, div.button span {
-  background-image: url("../../img/jquery/uniform/sprite.png");
+  background-image: url("../../img/jquery/uniform/ss_sprite.png");
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased; }
 div.selector, div.checker, div.button, div.radio, div.uploader {
@@ -351,11 +351,14 @@ div.button.disabled span, div.button.disabled.active span {
 div.selector {
   font-size: 12px; }
   div.selector span {
-    color: #666;
-    text-shadow: 0 1px 0 #fff; }
+    /*color: white;*/
+    /*text-shadow: 0 1px 0 #fff;*/
+    color: whitesmoke; }
   div.selector select {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: 12px; }
+    font-size: 12px; 
+    background: #a88e53;
+    color: whitesmoke;}
   div.selector.disabled span, div.selector.disabled.active span {
     color: #bbb; }
 

@@ -16,7 +16,8 @@
       width: 100%;
       margin: 0 0 20px 0; } }
   #stores .address-input label {
-    margin-right: 5px; }
+    margin-right: 5px;
+    color: white; }
 #stores .radius-input {
   float: left;
   line-height: 23px;
@@ -25,7 +26,8 @@
   #stores .radius-input .selector {
     float: left; }
   #stores .radius-input label {
-    margin-right: 10px; }
+    margin-right: 10px; 
+    color: white;}
   #stores .radius-input #radiusSelect {
     width: 78px; }
 #stores .store-content {

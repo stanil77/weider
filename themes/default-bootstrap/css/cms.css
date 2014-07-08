@@ -4,14 +4,19 @@
 #cms #center_column .block-cms {
   padding-bottom: 20px; }
 #cms #center_column h1 {
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  color: white; }
 #cms #center_column h3 {
   font-size: 16px;
   border-bottom: none;
   margin: 0;
-  padding: 0 0 17px 0; }
+  padding: 0 0 17px 0;
+  color: white; }
+#cms #center_column h2 {
+  color: white; }
 #cms #center_column p {
-  line-height: 18px; }
+  line-height: 18px; 
+  color: white;}
 #cms #center_column .list-1 li {
   padding: 4px 0 6px 0;
   font-weight: bold;

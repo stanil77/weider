@@ -39,7 +39,8 @@
 #layered_block_left .layered_subtitle {
   display: inline-block;
   font-weight: bold;
-  font-size: 12px; }
+  font-size: 12px; 
+color: #a88e53;}
 
 #layered_block_left ul {
   clear: both;
