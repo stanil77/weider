@@ -78,6 +78,13 @@
 										{if $product.specific_prices.reduction_type == 'percentage'}
 											<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
 										{/if}
+									{elseif $product.price_without_reduction>$product.price}
+										{hook h="displayProductPriceBlock" product=$product type="old_price"}
+										<span class="old-price product-price">
+										{displayWtPrice p=$product.price_without_reduction}
+										</span>
+										{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
+										<span class="price-percent-reduction">{((1-($product.price_without_reduction/$product.price)) * 100)|round:0}%</span>
 									{/if}
 									{hook h="displayProductPriceBlock" product=$product type="price"}
 									{hook h="displayProductPriceBlock" product=$product type="unit_price"}
@@ -130,6 +137,13 @@
 								{if $product.specific_prices.reduction_type == 'percentage'}
 									<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
 								{/if}
+							{elseif $product.price_without_reduction>$product.price}
+								{hook h="displayProductPriceBlock" product=$product type="old_price"}
+								<span class="old-price product-price">
+									{displayWtPrice p=$product.price_without_reduction}
+								</span>
+								{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
+								<span class="price-percent-reduction">{((1-($product.price_without_reduction/$product.price)) * 100)|round:0}%</span>
 							{/if}
 							{hook h="displayProductPriceBlock" product=$product type="price"}
 							{hook h="displayProductPriceBlock" product=$product type="unit_price"}
