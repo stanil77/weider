@@ -23,6 +23,6 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <a href="/content/13-otstypki" title="Отстъпки">
-<marquee class="marquee"> ОТСТЪПКА ПРИ ПОРЪЧКА НАД 150 ЛЕВА!!! </marquee>
+<marquee class="marquee"> 10% ОТСТЪПКА ПРИ ПОРЪЧКА НАД 170 ЛЕВА!!! </marquee>
 
 </a>
