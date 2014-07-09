@@ -1,3 +1,722 @@
+/* BEGIN Edge Reflow Styles */
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+}
+
+#text {
+    float: left;
+    font-size: 4.9em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 800;
+    line-height: 1em;
+    margin-left: 0%;
+    margin-top: 34px;
+    clear: none;
+    min-height: 88px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+}
+
+#text1 {
+    margin-left: 3.039648%;
+    float: left;
+    font-size: 1em;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    margin-top: 44px;
+    clear: both;
+}
+
+#text2 {
+    float: left;
+    font-size: 2.1em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: both;
+    min-height: 0px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+#text6 {
+    float: left;
+    font-size: 1.5em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 12px;
+    clear: both;
+    min-height: 177px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+#text3 {
+    float: left;
+    font-size: 1.5em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 20px;
+    clear: both;
+    min-height: 0px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+#text5 {
+    float: left;
+    font-size: 2.1em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 10px;
+    clear: both;
+    min-height: 0px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+#text10 {
+    float: left;
+    font-size: 2.1em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: both;
+    min-height: 0px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+#text9 {
+    float: left;
+    font-size: 1.7em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: none;
+    min-height: 40px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0px;
+    overflow: auto;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    top: 753.5px;
+}
+
+#image2 {
+    float: left;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: both;
+    color: rgb(0, 0, 0);
+    margin-right: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+}
+
+#image1 {
+    float: left;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: both;
+    color: rgb(0, 0, 0);
+    margin-right: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+}
+
+#text8 {
+    float: left;
+    font-size: 1.7em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: none;
+    min-height: 56px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0px;
+    overflow: auto;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    top: 888.5px;
+}
+
+#image {
+    float: left;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: both;
+    color: rgb(0, 0, 0);
+    margin-right: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+}
+
+#text7 {
+    float: left;
+    font-size: 1.7em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: none;
+    min-height: 56px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0px;
+    overflow: auto;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    top: 1046px;
+}
+
+#text4 {
+    float: left;
+    font-size: 1.3em;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-left: 0%;
+    margin-top: 10px;
+    clear: both;
+    min-height: 39px;
+    color: rgb(255, 255, 255);
+    font-family: sommet-rounded;
+    margin-right: 0%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 2270px) {
+    .primaryContainer {
+        background-color: rgb(0, 0, 0);
+        position: relative;
+    }
+
+    #text {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        font-weight: 800;
+        line-height: 1em;
+        margin-left: 0%;
+        margin-top: 34px;
+        clear: none;
+        min-height: 88px;
+        color: rgb(255, 255, 255);
+    }
+
+    #text1 {
+        margin-left: 3.039648%;
+        float: left;
+        font-size: 1em;
+        width: auto;
+        height: auto;
+        text-align: left;
+        font-weight: normal;
+        line-height: 1em;
+        margin-top: 44px;
+        clear: both;
+    }
+
+    #text2 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 0px;
+        clear: both;
+        min-height: 0px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 2.1em;
+        overflow: hidden;
+    }
+
+    #text6 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 12px;
+        clear: both;
+        min-height: 177px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 1.5em;
+        overflow: hidden;
+    }
+
+    #text3 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 20px;
+        clear: both;
+        min-height: 0px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 1.5em;
+        overflow: hidden;
+    }
+
+    #text5 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 10px;
+        clear: both;
+        min-height: 0px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 2.1em;
+        overflow: hidden;
+    }
+
+    #text10 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 0px;
+        clear: none;
+        min-height: 0px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 2.1em;
+        overflow: hidden;
+    }
+
+    #text9 {
+        float: left;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        clear: none;
+        min-height: 40px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        font-size: 1.7em;
+        bottom: auto;
+    }
+
+    #image2 {
+        float: left;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        clear: both;
+        color: rgb(0, 0, 0);
+        top: 658.5px;
+        left: 0%;
+    }
+
+    #image1 {
+        float: left;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        clear: both;
+        color: rgb(0, 0, 0);
+        top: 793.5px;
+        left: 0%;
+    }
+
+    #text8 {
+        float: left;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        clear: none;
+        min-height: 56px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        font-size: 1.7em;
+        bottom: auto;
+    }
+
+    #image {
+        float: left;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        clear: both;
+        color: rgb(0, 0, 0);
+        top: 944.5px;
+        left: 0%;
+    }
+
+    #text7 {
+        float: left;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        clear: none;
+        min-height: 56px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        font-size: 1.7em;
+        bottom: auto;
+    }
+
+    #text4 {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        line-height: 1.4em;
+        margin-left: 0%;
+        margin-top: 10px;
+        clear: both;
+        min-height: 39px;
+        color: rgb(255, 255, 255);
+        font-family: sommet-rounded;
+        margin-right: 0%;
+        font-size: 1.3em;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    #text8 {
+        font-size: 1.4em;
+    }
+
+    #text7 {
+        font-size: 1.4em;
+    }
+
+    #text9 {
+        font-size: 1.4em;
+    }
+
+    #text1 {
+        margin-top: 44px;
+        margin-left: 3.037383%;
+        clear: both;
+    }
+
+    #text2 {
+        margin-top: 0px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text3 {
+        margin-top: 20px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text4 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text5 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text6 {
+        margin-top: 12px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text10 {
+        margin-top: 0px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #image2 {
+        clear: both;
+        overflow: visible;
+    }
+
+    #image1 {
+        clear: both;
+        overflow: visible;
+    }
+
+    #image {
+        clear: both;
+        overflow: visible;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    #text7 {
+        font-size: 1.2em;
+        top: 1077.5px;
+        left: 0%;
+    }
+
+    #text8 {
+        font-size: 1.2em;
+        top: 890px;
+        left: 0%;
+    }
+
+    #text9 {
+        font-size: 1.2em;
+        top: 722px;
+        left: 0%;
+    }
+
+    #text6 {
+        font-size: 1.2em;
+        margin-top: 12px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text3 {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #image {
+        top: 976px;
+        left: 0%;
+    }
+
+    #image1 {
+        top: 795px;
+        left: 0%;
+    }
+
+    #image2 {
+        top: 627px;
+        left: 0%;
+    }
+
+    #text10 {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        clear: none;
+        position: absolute;
+        width: 100%;
+        top: 580px;
+        left: 0%;
+    }
+
+    #text1 {
+        margin-top: 44px;
+        margin-left: 3.031994%;
+        clear: both;
+    }
+
+    #text2 {
+        margin-top: 0px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text4 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text5 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 523px) {
+    #text {
+        font-size: 3.1em;
+    }
+
+    #text2 {
+        margin-top: 0px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #image {
+        clear: both;
+        float: none;
+        top: 976px;
+        left: 0%;
+    }
+
+    #text1 {
+        margin-top: 44px;
+        margin-left: 3.023228%;
+        clear: both;
+    }
+
+    #text3 {
+        margin-top: 20px;
+        margin-left: 0%;
+        clear: both;
+        font-size: 1em;
+    }
+
+    #text4 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+        font-size: 1em;
+    }
+
+    #text5 {
+        margin-top: 10px;
+        margin-left: 0%;
+        clear: both;
+    }
+
+    #text6 {
+        margin-top: 12px;
+        margin-left: 0%;
+        clear: both;
+        font-size: 1em;
+        height: auto;
+        min-height: 151px;
+    }
+
+    #text10 {
+        margin-top: 17.5px;
+        margin-left: 0%;
+        clear: both;
+        top: 546px;
+        left: 0%;
+    }
+
+    #image2 {
+        clear: both;
+        top: 627px;
+        left: 0%;
+    }
+
+    #text9 {
+        clear: both;
+        font-size: 1.2em;
+        top: 722px;
+        left: 0%;
+    }
+
+    #image1 {
+        clear: both;
+        top: 795px;
+        left: 0%;
+    }
+
+    #text8 {
+        clear: both;
+        font-size: 1.2em;
+        top: 890px;
+        left: 0%;
+    }
+
+    #text7 {
+        clear: none;
+        font-size: 1.2em;
+    }
+}
+
+
+/* END Edhe Reflow Styles */
+
 /**************************************************************
 					CMS Pages Styles
 ***************************************************************/
