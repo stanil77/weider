@@ -25,9 +25,7 @@
 
 <div id="mywishlist">
 	{capture name=path}
-		<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">
-			{l s='My account' mod='blockwishlist'}
-		</a>
+		<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">{l s='My account' mod='blockwishlist'}</a>
 		<span class="navigation-pipe">
 			{$navigationPipe}
 		</span>
@@ -43,7 +41,7 @@
 	{if $id_customer|intval neq 0}
 		<form method="post" class="std box" id="form_wishlist">
 			<fieldset>
-				<h3 class="page-subheading">{l s='New wishlist' mod='blockwishlist'}</h3>
+				<h3 class="page-subheading" style="color: black;">{l s='New wishlist' mod='blockwishlist'}</h3>
 				<div class="form-group">
 					<input type="hidden" name="token" value="{$token|escape:'html':'UTF-8'}" />
 					<label class="align_right" for="name">

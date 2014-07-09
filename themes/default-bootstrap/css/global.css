@@ -5349,7 +5349,7 @@ header {
 
 p.info-title {
   font-weight: bold;
-  color: #333333;
+  color: white;
   margin-bottom: 25px; }
 
 p.info-account {
@@ -5701,8 +5701,7 @@ span.exclusive {
         padding-right: 7px;
         padding-left: 7px; } }
     .button.exclusive-medium span:hover {
-      /* border-color: #9e9e9e #c2c2c2 #c8c8c8 #c2c2c2;*/
-      background: black; }
+      /* border-color: #9e9e9e #c2c2c2 #c8c8c8 #c2c2c2;*/ }
       .button.exclusive-medium span:hover span {
         background: #e7e7e7;
         background: -moz-linear-gradient(top, #e7e7e7 0%, #e7e7e7 0%);
@@ -6279,7 +6278,7 @@ table.table_block td {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color: #555454;
+  color: white;
   font-size: 18px;
   padding: 0 0 15px;
   line-height: normal;

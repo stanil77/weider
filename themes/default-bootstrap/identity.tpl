@@ -24,9 +24,7 @@
 *}
 
 {capture name=path}
-    <a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">
-        {l s='My account'}
-    </a>
+    <a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">{l s='My account'}</a>
     <span class="navigation-pipe">
         {$navigationPipe}
     </span>
@@ -47,7 +45,7 @@
             {if isset($pwd_changed)}<br />{l s='Your password has been sent to your email:'} {$email}{/if}
         </p>
     {else}
-        <p class="info-title">
+        <p class="info-title" style="color: white;">
             {l s='Please be sure to update your personal information if it has changed.'}
         </p>
         <p class="required">

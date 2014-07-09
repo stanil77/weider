@@ -23,9 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {capture name=path}
-	<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">
-		{l s='My account' mod='favoriteproducts'}
-	</a>
+	<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">{l s='My account' mod='favoriteproducts'}</a>
 	<span class="navigation-pipe">{$navigationPipe}</span>
 	<span class="navigation_page">{l s='My favorite products' mod='favoriteproducts'}</span>
 {/capture}
