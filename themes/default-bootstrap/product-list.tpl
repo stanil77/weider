@@ -65,7 +65,7 @@
 							<span>{l s='Quick view'}</span>
 						</a>
 						{/if}
-						{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+						{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))&&$page_name!='product'}
 							<div class="content_price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 								{assign var="s_priceshown_h" value="false"}
 								{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
@@ -204,9 +204,11 @@
 								</span>
 							{/if}
 						{/if}
+						{*
 						<a itemprop="url" class="button lnk_view btn btn-default" href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
 							<span>{l s='More'}</span>
 						</a>
+						*}
 					</div>
 					{if isset($product.color_list)}
 						<div class="color-list-container">{$product.color_list}</div>
@@ -222,6 +224,7 @@
 								<span class="discount">{l s='Reduced price!'}</span>
 							{/if}
 					</div>
+					{*
 					{if (!$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 						{if isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
 							<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
@@ -241,6 +244,7 @@
 							</span>
 						{/if}
 					{/if}
+					*}
 				</div>
 				{if $page_name != 'index'}
 	 				<div class="functional-buttons clearfix">
