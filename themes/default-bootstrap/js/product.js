@@ -665,8 +665,15 @@ function updatePrice()
 	$('.price-ecotax').hide();
 	$('.unit-price').hide();
 
+	var sTemp = Math.round(priceWithDiscountsDisplay*100)/100;
+	var sPrice = sTemp.toFixed(2).toString().split('.');
+	var sLev = sPrice[0];
+	var sStotinki = sPrice[1];
 
-	$('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay * currencyRate, currencyFormat, currencySign, currencyBlank));
+	//$('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay * currencyRate, currencyFormat, currencySign, currencyBlank));
+	$('#i_priceLev').text(sLev);
+	$('#i_stotinki').text(sStotinki);
+
 	//$('#our_price_display').text(productPriceDisplayLev);
 	//if (productPriceDisplayStotinki<10) {productPriceDisplayStotinki=productPriceDisplayStotinki*10};
 	//$('#i_stotinki').text(productPriceDisplayStotinki);
