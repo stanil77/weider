@@ -2260,7 +2260,7 @@ input[type="button"].btn-block {
     .nav-tabs > li > a {
       margin-right: 2px;
       line-height: 1.42857;
-      border: 1px solid transparent;
+      /*border: 1px solid transparent;*/
       border-radius: 0px 0px 0 0; }
       .nav-tabs > li > a:hover {
         border-color: #eeeeee #eeeeee #dddddd; }
@@ -5748,7 +5748,7 @@ span.exclusive {
     border-color: black; }
     .button.ajax_add_to_cart_button:hover span {
       filter: none;
-      background: black; }
+      background: #74d578; }
 
 .button.lnk_view {
   font: 700 17px/21px Arial, Helvetica, sans-serif;

@@ -430,7 +430,7 @@ color: black;}
     border-top: 1px solid white;
     border-right: 1px solid white;
     border-left: 1px solid white;
-    border-bottom: 1px solid #012740;
+    /*border-bottom: 1px solid #012740;*/
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
