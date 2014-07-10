@@ -31,10 +31,32 @@
 		{assign var='productPrice' value=$product->getPrice(true, $smarty.const.NULL, $priceDisplayPrecision)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(false, $smarty.const.NULL)}
 		{assign var="cena" value=array_filter(explode(".",$productPrice))}
+		{assign var="productPriceLev" value=$cena[0]}
+		{assign var="productPriceStotinki" value=0}
+		{if isset($cena[1])}
+			{if $cena[1] < 10}
+				{$productPriceStotinki=10*$cena[1]}
+			{else}
+				{$productPriceStotinki=$cena[1]}
+			{/if}
+		{else}
+			{$productPriceStotinki=0}
+		{/if}
 	{elseif $priceDisplay == 1}
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, $priceDisplayPrecision)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 		{assign var="cena" value=array_filter(explode(".",$productPrice))}
+		{assign var="productPriceLev" value=$cena[0]}
+		{assign var="productPriceStotinki" value=0}
+		{if isset($cena[1])}
+			{if $cena[1] < 10}
+				{$productPriceStotinki=10*$cena[1]}
+			{else}
+				{$productPriceStotinki=$cena[1]}
+			{/if}
+		{else}
+			{$productPriceStotinki=0}
+		{/if}
 	{/if}
 <div itemscope itemtype="http://schema.org/Product">
 	<div class="primary_block row">
@@ -268,7 +290,7 @@
 								<p class="our_price_display" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 									{if $product->quantity > 0}<link itemprop="availability" href="http://schema.org/InStock"/>{/if}
 									{if $priceDisplay >= 0 && $priceDisplay <= 2}
-                                    <span id="i_priceLev" itemprop="price">{$cena[0]}</span>
+                                    	<span id="i_priceLev" itemprop="price">{$cena[0]}</span>
                                     	
                                     	<span id="i_stotinki" class="stotinki" itemprop="priceStotinki">
                                     	{if !isset($cena[1])}00{else}{$cena[1]}{if ($cena[1]<10)&&($cena>0)}0{/if}{/if}</span>
@@ -931,6 +953,8 @@
 {addJsDef productAvailableForOrder=$product->available_for_order|boolval}
 {addJsDef productPriceWithoutReduction=$productPriceWithoutReduction|floatval}
 {addJsDef productPrice=$productPrice|floatval}
+{addJsDef productPriceLev=productPriceLev|intval}
+{addJsDef productPriceStotinki=$productPriceStotinki|intval}
 {addJsDef productUnitPriceRatio=$product->unit_price_ratio|floatval}
 {addJsDef productShowPrice=(!$PS_CATALOG_MODE && $product->show_price)|boolval}
 {addJsDef PS_CATALOG_MODE=$PS_CATALOG_MODE}
