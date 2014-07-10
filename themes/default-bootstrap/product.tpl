@@ -30,9 +30,11 @@
 	{if !$priceDisplay || $priceDisplay == 2}
 		{assign var='productPrice' value=$product->getPrice(true, $smarty.const.NULL, $priceDisplayPrecision)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(false, $smarty.const.NULL)}
+		{assign var="cena" value=array_filter(explode(".",$productPrice))}
 	{elseif $priceDisplay == 1}
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, $priceDisplayPrecision)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
+		{assign var="cena" value=array_filter(explode(".",$productPrice))}
 	{/if}
 <div itemscope itemtype="http://schema.org/Product">
 	<div class="primary_block row">
@@ -266,14 +268,11 @@
 								<p class="our_price_display" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 									{if $product->quantity > 0}<link itemprop="availability" href="http://schema.org/InStock"/>{/if}
 									{if $priceDisplay >= 0 && $priceDisplay <= 2}
-                                    {*{assign var="cena" value=explode(".",$productPrice)}*}
-                                    
-										<span id="our_price_display" itemprop="price">{convertPrice price=$productPrice}</span>
-                                    
-                                    {*<span id="our_price_display" itemprop="price">{$cena[0]}</span>
-                                    
-                                    <span class="stotinki">{$cena[1]}</span>
-                                    *}	<!--{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) || !isset($display_tax_label))}
+                                    <span id="i_priceLev" itemprop="price">{$cena[0]}</span>
+                                    	
+                                    	<span id="i_stotinki" class="stotinki" itemprop="priceStotinki">
+                                    	{if !isset($cena[1])}00{else}{$cena[1]}{if ($cena[1]<10)&&($cena>0)}0{/if}{/if}</span>
+                                    	<span id="i_BGN" itemprop="pBGN" class="c_BGN">лева</span>	<!--{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) || !isset($display_tax_label))}
 											{if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}
 										{/if}-->
 										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
