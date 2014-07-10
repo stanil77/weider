@@ -773,16 +773,51 @@ table.table-product-discounts {
 .discount {
   display: none; }
 
+.c_BGN {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: "pragmatica-web", sans-serif;
+  color: #333333;
+  letter-spacing: normal;
+  margin-left: -35px; }
+  @media (max-width: 991px) {
+    .c_BGN {
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: normal;
+      margin-left: -2.7em;} }
+.stotinki {
+  vertical-align: baseline;
+  position: relative;
+  top: -15px;
+  /*left: -10px;*/
+  letter-spacing: normal;
+  color: #333333;
+  font-size: 24px;
+  font-family: "pragmatica-web", sans-serif;}
+  @media (max-width: 991px) {
+    .stotinki {
+      vertical-align: baseline;
+      position: relative;
+      letter-spacing: normal;
+      top: -8px;
+      left: -3px;
+      font-size: 15px;
+      line-height: 18px; } }
+
 .our_price_display {
   font-weight: 600;
-  font-size: 29px;
-  line-height: 32px;
+  font-size: 44px;
+  line-height: 46px;
+  letter-spacing: -5px;
   font-family: "pragmatica-web",  sans-serif;
   color: #333333; }
   @media (max-width: 991px) {
     .our_price_display {
       font-size: 26px;
-      line-height: 28px; } }
+      line-height: 28px;
+      letter-spacing: -2px;} }
 
 #old_price {
   /*padding-bottom: 15px;*/
@@ -1127,12 +1162,4 @@ background: #a88e53;
     outline: 0;
     outline-style:none;
     outline-width:0;
-}
-
-
-.stotinki {
-    vertical-align:baseline; 
-    position: relative;
-    top: -10px;
-    font-size:15px; 
 }

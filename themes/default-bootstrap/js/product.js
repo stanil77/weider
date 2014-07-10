@@ -436,6 +436,8 @@ function findCombination(firstTime)
 function updateDisplay()
 {
 	var productPriceDisplay = productPrice;
+	var productPriceDisplayLev = productPriceLev;
+	var productPriceDisplayStotinki = productPriceStotinki;
 	var productPriceWithoutReductionDisplay = productPriceWithoutReduction;
 
 	if (!selectedCombination['unavailable'] && quantityAvailable > 0 && productAvailableForOrder == 1)
@@ -665,7 +667,9 @@ function updatePrice()
 
 
 	$('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay * currencyRate, currencyFormat, currencySign, currencyBlank));
-
+	//$('#our_price_display').text(productPriceDisplayLev);
+	//if (productPriceDisplayStotinki<10) {productPriceDisplayStotinki=productPriceDisplayStotinki*10};
+	//$('#i_stotinki').text(productPriceDisplayStotinki);
 	// If the calculated price (after all discounts) is different than the base price
 	// we show the old price striked through
 	if (priceWithDiscountsDisplay.toFixed(2) != basePriceDisplay.toFixed(2))
@@ -674,8 +678,8 @@ function updatePrice()
 		$('#old_price,#old_price_display,#old_price_display_taxes').show();
 
 		// Then if it's not only a group reduction we display the discount in red box
-		if (priceWithDiscountsWithoutTax != priceWithGroupReductionWithoutTax)
-		{
+		//if (priceWithDiscountsWithoutTax != priceWithGroupReductionWithoutTax)
+		//{
 			if (combination.specific_price.reduction_type == 'amount')
 			{
 				$('#reduction_amount_display').html('-' + formatCurrency(parseFloat(discountValue), currencyFormat, currencySign, currencyBlank));
@@ -686,7 +690,7 @@ function updatePrice()
 				$('#reduction_percent_display').html('-' + parseFloat(discountPercentage).toFixed(0) + '%');
 				$('#reduction_percent').show();
 			}
-		}
+		//}
 	}
 
 	// Green Tax (Eco tax)
