@@ -467,7 +467,7 @@
 				{if $delivery->id}
 					<div class="col-xs-12 col-sm-6"{if !$have_non_virtual_products} style="display: none;"{/if}>
 						<ul id="delivery_address" class="address item box">
-							<li><h3 class="page-subheading">{l s='Delivery address'}&nbsp;<span class="address_alias">({$delivery->alias})</span></h3></li>
+							<li><h3 class="page-subheading" style="color:black;">{l s='Delivery address'}&nbsp;<span class="address_alias">({$delivery->alias})</span></h3></li>
 							{if $delivery->company}<li class="address_company">{$delivery->company|escape:'html':'UTF-8'}</li>{/if}
 							<li class="address_name">{$delivery->firstname|escape:'html':'UTF-8'} {$delivery->lastname|escape:'html':'UTF-8'}</li>
 							<li class="address_address1">{$delivery->address1|escape:'html':'UTF-8'}</li>
@@ -480,7 +480,7 @@
 				{if $invoice->id}
 					<div class="col-xs-12 col-sm-6">
 						<ul id="invoice_address" class="address alternate_item box">
-							<li><h3 class="page-subheading">{l s='Invoice address'}&nbsp;<span class="address_alias">({$invoice->alias})</span></h3></li>
+							<li><h3 class="page-subheading" style="color:black;">{l s='Invoice address'}&nbsp;<span class="address_alias">({$invoice->alias})</span></h3></li>
 							{if $invoice->company}<li class="address_company">{$invoice->company|escape:'html':'UTF-8'}</li>{/if}
 							<li class="address_name">{$invoice->firstname|escape:'html':'UTF-8'} {$invoice->lastname|escape:'html':'UTF-8'}</li>
 							<li class="address_address1">{$invoice->address1|escape:'html':'UTF-8'}</li>
@@ -495,7 +495,7 @@
 					<div class="col-xs-12 col-sm-6"{if $k == 'delivery' && !$have_non_virtual_products} style="display: none;"{/if}>
 						<ul class="address {if $address@last}last_item{elseif $address@first}first_item{/if} {if $address@index % 2}alternate_item{else}item{/if} box">
 							<li>
-								<h3 class="page-subheading">
+								<h3 class="page-subheading" style="color:black;">
 									{if $k eq 'invoice'}
 										{l s='Invoice address'}
 									{elseif $k eq 'delivery' && $delivery->id}
