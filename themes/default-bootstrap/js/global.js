@@ -139,7 +139,8 @@ function blockHover(status)
 		if ($('body').find('.container').width() == 1170)
 		{
 			var pcHeight = $(this).parent().outerHeight();
-			var pcPHeight = $(this).parent().find('.button-container').outerHeight() + $(this).parent().find('.comments_note').outerHeight() + $(this).parent().find('.functional-buttons').outerHeight();
+			var pcPHeight = 1;
+			//var pcPHeight = $(this).parent().find('.button-container').outerHeight() + $(this).parent().find('.comments_note').outerHeight() + $(this).parent().find('.functional-buttons').outerHeight();
 			$(this).parent().addClass('hovered').css({'height':pcHeight + pcPHeight, 'margin-bottom':pcPHeight * (-1)});
 		}
 	});
@@ -165,7 +166,8 @@ function quick_view()
 			$.fancybox({
 				'padding':  0,
 				'width':    1087,
-				'height':   610,
+				'height':   633,
+				'scrolling': 'no',
 				'type':     'iframe',
 				'href':     url + 'content_only=1'
 			});
@@ -267,7 +269,7 @@ function display(view)
 					html += '<span class="availability">'+ availability +'</span>';
 				}
 			html += '</div>';
-			html += '<div class="functional-buttons clearfix">' + $(element).find('.functional-buttons').html() + '</div>';
+			//html += '<div class="functional-buttons clearfix">' + $(element).find('.functional-buttons').html() + '</div>';
 		html += '</div>';		
 		$(element).html(html);
 		});

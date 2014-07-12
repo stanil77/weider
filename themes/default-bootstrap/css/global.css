@@ -5902,6 +5902,55 @@ table.table_block td {
     position: absolute;
     
 }
+.spestqvate-box {
+  position: absolute;
+  top: -4px;
+  overflow: hidden;
+  height: 85px;
+  width: 85px;
+  text-align: center;
+  z-index: 0; 
+  right: -5px;
+  background: url("/img/spestqvate.svg");
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  }
+
+.spestqvate-label {
+  font: 700 30px/18px "pragmatica-web", sans-serif;
+  color: white;
+  margin-top: 36px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+  display: block;
+  /* width: 85px; */
+  /* text-align: center; */
+  /* text-transform: uppercase; */
+  /* padding: 37px 0 7px; */
+  /* position: absolute; */
+  /* border-radius: 47px; */
+  /* height: 85px; */
+  /* right: -33px; */
+  /* top: 16px; */
+  z-index: 1;
+  }
+
+.spestqvate-label-stotinki {
+  font: 700 20px "pragmatica-web", sans-serif;
+
+  color: white;
+  z-index: 2;
+  }
+.spestqvate-label-valuta {
+  font-family: "sommet-rounded";
+  font-size: 10px;
+  font-weight: 400;
+
+  color: white;
+  z-index: 2;
+  margin-left: -22px;
+  
+  }
 
 .new-label {
   font: 700 14px/12px Arial, Helvetica, sans-serif;
