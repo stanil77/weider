@@ -28,10 +28,12 @@
 		{assign var='nbItemsPerLine' value=3}
 		{assign var='nbItemsPerLineTablet' value=2}
 		{assign var='nbItemsPerLineMobile' value=3}
+		
 	{else}
 		{assign var='nbItemsPerLine' value=4}
 		{assign var='nbItemsPerLineTablet' value=3}
 		{assign var='nbItemsPerLineMobile' value=2}
+
 	{/if}
 	{*define numbers of product per line in other page for tablet*}
 	{assign var='nbLi' value=$products|@count}
@@ -43,6 +45,21 @@
 		{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineMobile assign=totModuloMobile}
+		{if ($product.specific_prices.reduction_type == 'amount')&&$product.specific_prices.reduction>0}
+			{assign var="s_reduction" value=array_filter(explode(".",$product.specific_prices.reduction))}
+			{assign var="reductionPriceLev" value=$s_reduction[0]}
+			{assign var="reductionPriceStotinki" value=0}
+			{if isset($s_reduction[1])}
+				{if $s_reduction[1] < 10}
+					{$reductionPriceStotinki=10*$s_reduction[1]}
+				{else}
+					{$reductiontPriceStotinki=$s_reduction[1]}
+				{/if}
+			{else}
+				{$reductionPriceStotinki=0}
+			{/if}
+		{/if}
+		
 		{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 		{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 		{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
@@ -82,7 +99,7 @@
 										{if $product.specific_prices.reduction_type == 'percentage'}
 											<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
 										{elseif $product.specific_prices.reduction_type == 'amount'}
-											<span class="price-percent-reduction">спестявате:{convertPrice price=$product.specific_prices.reduction}</span>
+											{*<span class="price-percent-reduction">спестявате:{convertPrice price=$product.specific_prices.reduction}</span>*}
 										{/if}
 									{elseif $product.price_without_reduction>$product.price}
 										{hook h="displayProductPriceBlock" product=$product type="old_price"}
@@ -117,12 +134,19 @@
 							<a class="pack-box" href="{$product.link|escape:'html':'UTF-8'}">
 								<span class="pack-label">{l s='Стак!'}</span>
 							</a>
-						{/if}
-						{if isset($product.on_sale) && $product.on_sale && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+							<a class="spestqvate-box" href="{$product.link|escape:'html':'UTF-8'}">
+								
+								<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}{if $reductionPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+								{*
+								<span class="spestqvate-label-stotinki">{$reductionPriceStotinki}</span>
+								*}
+							</a>
+						{elseif isset($product.on_sale) && $product.on_sale && isset($product.show_price) && $product.show_price}
 							<a class="sale-box" href="{$product.link|escape:'html':'UTF-8'}">
 								<span class="sale-label">{l s='Sale!'}</span>
 							</a>
 						{/if}
+
 					</div>
 					{hook h="displayProductDeliveryTime" product=$product}
 					{hook h="displayProductPriceBlock" product=$product type="weight"}
@@ -158,7 +182,7 @@
 								{if $product.specific_prices.reduction_type == 'percentage'}
 									<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
 								{elseif $product.specific_prices.reduction_type == 'amount'}
-									<span class="price-percent-reduction">спестявате:{convertPrice price=$product.specific_prices.reduction}</span>
+									{*<span class="price-percent-reduction">спестявате:{convertPrice price=$product.specific_prices.reduction}</span>*}
 								{/if}
 							{elseif $product.price_without_reduction>$product.price}
 								{hook h="displayProductPriceBlock" product=$product type="old_price"}
@@ -246,6 +270,7 @@
 					{/if}
 					*}
 				</div>
+				
 				{if $page_name != 'index'}
 	 				<div class="functional-buttons clearfix">
 						{hook h='displayProductListFunctionalButtons' product=$product}
@@ -256,6 +281,7 @@
 						{/if}
 					</div>
 				{/if}
+				
 			</div><!-- .product-container> -->
 		</li>
 	{/foreach}

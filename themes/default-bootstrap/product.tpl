@@ -27,6 +27,22 @@
 	{if !isset($priceDisplayPrecision)}
 		{assign var='priceDisplayPrecision' value=2}
 	{/if}
+
+	{if ($product->specificPrice.reduction_type == 'amount')&&$product->specificPrice.reduction|floatval>0}
+		{assign var="s_reduction" value=array_filter(explode(".",$product->specificPrice.reduction))}
+		{assign var="reductionPriceLev" value=$s_reduction[0]}
+		{assign var="reductionPriceStotinki" value=0}
+		{if isset($s_reduction[1])}
+			{if $s_reduction[1] < 10}
+				{$reductionPriceStotinki=10*$s_reduction[1]}
+			{else}
+				{$reductiontPriceStotinki=$s_reduction[1]}
+			{/if}
+		{else}
+			{$reductionPriceStotinki=0}
+		{/if}
+	{/if}
+
 	{if !$priceDisplay || $priceDisplay == 2}
 		{assign var='productPrice' value=$product->getPrice(true, $smarty.const.NULL, $priceDisplayPrecision)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(false, $smarty.const.NULL)}
@@ -90,9 +106,15 @@
 					</span>
 				{/if}
 				{if $product->on_sale}
-					<span class="sale-box no-print">
-						<span class="sale-label">{l s='Sale!'}</span>
-					</span>
+					{if ($product->specificPrice.reduction_type == 'amount')&&$product->specificPrice.reduction|floatval>0}
+						<span class="spestqvate-box">
+							<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}{if $reductionPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+							</span>
+					{else}
+						<span class="sale-box no-print">
+							<span class="sale-label">{l s='Sale!'}</span>
+						</span>
+					{/if}
 				{elseif $product->specificPrice && $product->specificPrice.reduction && $productPriceWithoutReduction > $productPrice}
 					<span class="discount">{l s='Reduced price!'}</span>
 				{/if}
