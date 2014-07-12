@@ -1017,7 +1017,8 @@ background: #050505; /* Old browsers */
       -o-border-radius: 0 4px 4px 0;
       border-radius: 0 4px 4px 0;
       position: relative;
-      padding-bottom: 125px; }
+      padding-bottom: 125px;
+       }
       @media (max-width: 991px) {
         #product.content_only div.primary_block div.pb-right-column .box-info-product {
           -webkit-border-radius: 0;
