@@ -6001,7 +6001,7 @@ table.table_block td {
 .sale-label {
   font: 700 13px/12px "sommet-rounded", sans-serif;
   color: white;
-  background: #f13340;
+  background: URL("/img/promo.svg");
   text-transform: uppercase;
   padding: 37px 0 7px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.24);

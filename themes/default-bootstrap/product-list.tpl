@@ -60,6 +60,25 @@
 			{/if}
 		{/if}
 		
+		{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
+			{assign var="s_price" value=array_filter(explode(".",$product.price))}
+			{if $product.price == 0}
+				{assign var="productPriceLev" value=0}
+			{else}
+				{assign var="productPriceLev" value=$s_price[0]}
+			{/if}
+			{assign var="productPriceStotinki" value=0}
+			{if isset($s_price[1])}
+				{if $s_price[1] < 10}
+					{$productPriceStotinki=10*$s_price[1]}
+				{else}
+					{$productPriceStotinki=$s_price[1]}
+				{/if}
+			{else}
+				{$productPriceStotinki=0}
+			{/if}
+		{/if}
+
 		{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 		{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 		{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
@@ -91,9 +110,12 @@
 										<span class="old-price product-price">
 											{displayWtPrice p=$product.price_without_reduction}
 										</span>
+										{*
 										<span itemprop="price" class="price product-price">
 											{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 										</span>
+										*}
+										<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
 										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 										{$s_priceshown_h="true"}
 										{if $product.specific_prices.reduction_type == 'percentage'}
@@ -106,18 +128,25 @@
 										<span class="old-price product-price">
 										{displayWtPrice p=$product.price_without_reduction}
 										</span>
+										{*
 										<span itemprop="price" class="price product-price">
 											{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 										</span>
+										*}
+										<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
 										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 										{$s_priceshown_h="true"}
 										{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
 										<span class="price-percent-reduction">{((1-($product.price_without_reduction/$product.price)) * 100)|round:0}%</span>
 									{/if}
 									{if $s_priceshown_h=="false"}
+									{*
 									<span itemprop="price" class="price product-price">
 											{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 									</span>
+									*}
+									<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+									
 									<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 									{/if}
 									{hook h="displayProductPriceBlock" product=$product type="price"}
@@ -171,10 +200,13 @@
 								<span class="old-price product-price">
 									{displayWtPrice p=$product.price_without_reduction}
 								</span>
-								
+								{*
 								<span itemprop="price" class="price product-price">
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
+								*}
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 							
@@ -189,9 +221,12 @@
 								<span class="old-price product-price">
 									{displayWtPrice p=$product.price_without_reduction}
 								</span>
+								{*
 								<span itemprop="price" class="price product-price">
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
+								*}
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 							
@@ -199,9 +234,12 @@
 								<span class="price-percent-reduction">{((1-($product.price_without_reduction/$product.price)) * 100)|round:0}%</span>
 							{/if}
 							{if $s_priceshown=="false"}
+								{*}
 								<span itemprop="price" class="price product-price">
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
+								*}
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 							{/if}
