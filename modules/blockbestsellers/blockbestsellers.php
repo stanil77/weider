@@ -258,9 +258,9 @@ class BlockBestSellers extends Module
 
 		$currency = new Currency($params['cookie']->id_currency);
 		$usetax = (Product::getTaxCalculationMethod((int)$this->context->customer->id) != PS_TAX_EXC);
-		foreach ($result as &$row)
+		/*foreach ($result as &$row)
 			$row['price'] = Tools::displayPrice(Product::getPriceStatic((int)$row['id_product'], $usetax), $currency);
-
+		*/
 		return $result;
 	}
 }

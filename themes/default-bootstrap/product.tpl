@@ -104,7 +104,7 @@
 				{if $product->on_sale}
 					{if ($product->specificPrice.reduction_type == 'amount')&&$product->specificPrice.reduction|floatval>0}
 						<span class="spestqvate-box">
-							<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}{if $reductionPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+							<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}</sup><span class="spestqvate-label-valuta">лева</span></span>
 							</span>
 					{else}
 						<span class="sale-box no-print">

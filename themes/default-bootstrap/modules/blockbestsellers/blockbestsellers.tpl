@@ -45,9 +45,11 @@
                     </h5>
                     <p class="product-description">{$product.description_short|strip_tags:'UTF-8'|truncate:75:'...'}</p>
                     {if !$PS_CATALOG_MODE}
+                    {*
                         <div class="price-box">
                             <span class="price">{$product.price}</span>
                         </div>
+                     *}
                     {/if}
                 </div>
 			</li>

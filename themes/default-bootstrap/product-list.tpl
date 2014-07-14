@@ -200,7 +200,7 @@
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
 								*}
-								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}</sup><span class="spestqvate-label-valuta">лева</span></span>
 										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
@@ -221,7 +221,7 @@
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
 								*}
-								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}</sup><span class="spestqvate-label-valuta">лева</span></span>
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 							
@@ -234,7 +234,7 @@
 									{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 								</span>
 								*}
-								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}{if $productPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+								<span itemprop="price" class="spestqvate-label" style="margin-top:6px; display:initial;">{$productPriceLev}<sup class="spestqvate-label-stotinki">{$productPriceStotinki}</sup><span class="spestqvate-label-valuta">лева</span></span>
 								{$s_priceshown="true"}
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 							{/if}
