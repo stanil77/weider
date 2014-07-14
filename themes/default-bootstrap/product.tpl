@@ -29,17 +29,13 @@
 	{/if}
 
 	{if ($product->specificPrice.reduction_type == 'amount')&&$product->specificPrice.reduction|floatval>0}
-		{assign var="s_reduction" value=array_filter(explode(".",$product->specificPrice.reduction))}
+		{assign var="s_reduction" value=array_filter(explode(".",$product->specificPrice.reduction|string_format:"%.2f"))}
 		{assign var="reductionPriceLev" value=$s_reduction[0]}
 		{assign var="reductionPriceStotinki" value=0}
 		{if isset($s_reduction[1])}
-			{if $s_reduction[1] < 10}
-				{$reductionPriceStotinki=10*$s_reduction[1]}
-			{else}
-				{$reductiontPriceStotinki=$s_reduction[1]}
-			{/if}
+			{assign var="reductionPriceStotinki" value=$s_reduction[1]}
 		{else}
-			{$reductionPriceStotinki=0}
+			{assign var="reductionPriceStotinki" value=0}
 		{/if}
 	{/if}
 

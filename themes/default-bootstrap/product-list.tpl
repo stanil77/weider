@@ -46,17 +46,12 @@
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineMobile assign=totModuloMobile}
 		{if ($product.specific_prices.reduction_type == 'amount')&&$product.specific_prices.reduction>0}
-			{assign var="s_reduction" value=array_filter(explode(".",$product.specific_prices.reduction))}
+			{assign var="s_reduction" value=array_filter(explode(".",$product.specific_prices.reduction|string_format:"%.2f"))}
 			{assign var="reductionPriceLev" value=$s_reduction[0]}
-			{assign var="reductionPriceStotinki" value=0}
 			{if isset($s_reduction[1])}
-				{if $s_reduction[1] < 10}
-					{$reductionPriceStotinki=10*$s_reduction[1]}
-				{else}
-					{$reductiontPriceStotinki=$s_reduction[1]}
-				{/if}
+					{assign var="reductionPriceStotinki" value=$s_reduction[1]}
 			{else}
-				{$reductionPriceStotinki=0}
+				{assign var="reductionPriceStotinki" value=0}
 			{/if}
 		{/if}
 		
@@ -165,7 +160,7 @@
 							</a>
 							<a class="spestqvate-box" href="{$product.link|escape:'html':'UTF-8'}">
 								
-								<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}{if $reductionPriceStotinki < 10}0{/if}</sup><span class="spestqvate-label-valuta">лева</span></span>
+								<span class="spestqvate-label">{$reductionPriceLev}<sup class="spestqvate-label-stotinki">{$reductionPriceStotinki}</sup><span class="spestqvate-label-valuta">лева</span></span>
 								{*
 								<span class="spestqvate-label-stotinki">{$reductionPriceStotinki}</span>
 								*}
