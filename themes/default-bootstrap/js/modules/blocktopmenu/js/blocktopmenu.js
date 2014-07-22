@@ -47,11 +47,14 @@ function responsiveMenu()
 		menuChange('disable');
 		responsiveflagMenu = false;
 	}
+	
+
 }
 
 // init Super Fish Menu for 767px+ resolution
 function desktopInit()
 {
+	
 	mCategoryGrover.off();
 	mCategoryGrover.removeClass('active');
 	$('.sf-menu > li > ul').removeClass('menu-mobile').parent().find('.menu-mobile-grover').remove();
@@ -73,6 +76,8 @@ function desktopInit()
             }
         });
     });
+
+
 }
 
 function mobileInit()
