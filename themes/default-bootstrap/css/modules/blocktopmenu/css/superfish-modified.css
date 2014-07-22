@@ -91,7 +91,11 @@
   .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a {
     background:#6d5c36;
     /*border-bottom-color: #666666;*/
-    color: white; }
+    color: white;
+
+
+
+     }
 
 .sf-menu li li li a {
   display: inline-block;
@@ -123,11 +127,53 @@
     .sf-menu li ul {
       top: 0; } }
 
+.sf-menu li li ul:before{
+
+	position: absolute;
+        left: 0;
+        top: 24px;
+        min-width: 200px;
+        border: 1px #aaaaaa solid;
+        border-radius: 10px;
+        background-color: #ffffcc;
+        padding: 12px;
+        color: #000000;
+        font-size: 14px;
+        z-index: 1;
+}
 .sf-menu li li ul {
+  /*
   position: static;
-  display: none; /* !important; hiding submenus*/
+  display: none;
+  */
+  /* !important; hiding submenus*/
+  /*
   opacity: 1 !important;
   background: none;
+  */
+	width: 450px;
+	z-index: -1;
+	left: 0;
+	opacity: 5;
+	border-left: #a88e53;
+	border-top: white;
+	border-top-style: inset;
+	border-top-width: 23px;
+	/* border-left-style: inset; */
+	border-left-width: 10px;
+	margin-left: -230px;
+	margin-top: 2px;
+	padding-left: 235px;
+	background: #a88e53;
+	background: -moz-linear-gradient(right, #a88e53 51%, #6d5c36 50%, #a88e53 44%);
+	background: -webkit-gradient(linear, right top, left top, color-stop(51%,#a88e53), color-stop(50%,#6d5c36), color-stop(44%,#a88e53)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right,  #a88e53 45%,#6d5c36 50%,#a88e53 44%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right,  #a88e53 51%,#6d5c36 50%,#a88e53 44%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(right,  #a88e53 45%,#6d5c36 50%,#a88e53 44%); /* IE10+ */
+	/* F�r Internet Explorer 8,9 */
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6d5c36, endColorstr=#a88e53)";*/
+	background: linear-gradient(right,  #a88e53 51%,#6d5c36 50%,#a88e53 44%); /* W3C */
+
   -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; }
@@ -169,17 +215,19 @@ ul.sf-menu li li li.sfHover ul {
     color: #333333; }
     .sf-menu > li > ul > li > a:hover {
       color: white; }
-    .sf-menu > li > ul > li > a:before {
-      /*
+    /*
+    .sf-menu > li > ul > li > a:hover::after {
+      
       font-family: "FontAwesome" ;
       content: "\f067";
       font-size: 14px; 
-      padding-right: 10px;*/
+      padding-right: 10px;
       }
-
+*/
 .sf-menu > li > ul > li {
   /*float: left;*/
   /*width: 20%;*/
+  position: relative;
   padding-right: 15px; }
   @media (max-width: 767px) {
     .sf-menu > li > ul > li {
