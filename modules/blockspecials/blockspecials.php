@@ -60,8 +60,6 @@ class BlockSpecials extends Module
 			&& $this->registerHook('addproduct')
 			&& $this->registerHook('updateproduct')
 			&& $this->registerHook('deleteproduct')
-            && $this->registerHook('displayHomeTab')
-			&& $this->registerHook('displayHomeTabContent')
 		);
 
 		if ($success)
